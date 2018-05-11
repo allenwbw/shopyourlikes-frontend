@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { Layout, Table, Card, Col, Row } from 'antd';
 import {
-    Route,
-    withRouter,
-    Switch,
-    Link,
-    Redirect
+    withRouter
 } from 'react-router-dom';
 import { getAllLinks } from "../../../util/APIUtils";
+import LoadingIndicator from "../../../common/LoadingIndicator";
 
-const { Content, Sider, Header } = Layout;
+const { Content } = Layout;
 
 class Dashboard extends Component {
     constructor(props) {
@@ -96,31 +93,35 @@ class Dashboard extends Component {
         return (
             <Layout style={{ padding: '0 24px 24px', marginLeft: 200, background: '#ECECEC' }}>
                 <Content>
-                    <div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
-                        <Row gutter={16} style={{ marginBottom: 8 }}>
-                            <Col span={12}>
-                                <Card hoverable={true}
-                                      className="earning-card"
-                                      title={<span style={{fontSize: '2em'}}>Total earnings</span>}>
-                                    <span style={{fontSize: 'large'}}>${totalEarning}.00</span>
-                                </Card>
-                            </Col>
-                            <Col span={12}>
-                                <Card hoverable={true}
-                                      className="clicks-card"
-                                      title={<span style={{fontSize: '2em'}}>Total clicks</span>}>
-                                    <span style={{fontSize: 'large'}}>{totalClicks} clicks</span>
-                                </Card>
-                            </Col>
-                        </Row>
-                        <Row gutter={16}>
-                            <Col span={24}>
-                                <Card title="Your recent links">
-                                    <Table rowKey={() => {tableKey += 1;tableKey}} dataSource={dataSource} columns={columns} />
-                                </Card>
-                            </Col>
-                        </Row>
-                    </div>
+                    {
+                        this.state.isLoading? (<LoadingIndicator />) :
+                            (<div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
+                                <Row gutter={16} style={{ marginBottom: 8 }}>
+                                    <Col span={12}>
+                                        <Card hoverable={true}
+                                              className="earning-card"
+                                              title={<span style={{fontSize: '2em'}}>Total earnings</span>}>
+                                            <span style={{fontSize: 'large'}}>${totalEarning}.00</span>
+                                        </Card>
+                                    </Col>
+                                    <Col span={12}>
+                                        <Card hoverable={true}
+                                              className="clicks-card"
+                                              title={<span style={{fontSize: '2em'}}>Total clicks</span>}>
+                                            <span style={{fontSize: 'large'}}>{totalClicks} clicks</span>
+                                        </Card>
+                                    </Col>
+                                </Row>
+                                <Row gutter={16}>
+                                    <Col span={24}>
+                                        <Card title="Your recent links">
+                                            <Table rowKey={() => {tableKey += 1;tableKey}} dataSource={dataSource} columns={columns} />
+                                        </Card>
+                                    </Col>
+                                </Row>
+                            </div>)
+                    }
+
                 </Content>
             </Layout>
         )

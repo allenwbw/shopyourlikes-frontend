@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import { Layout, Table, Card, Col, Row } from 'antd';
 import {
-    Route,
     withRouter,
-    Switch,
-    Link,
-    Redirect
 } from 'react-router-dom';
 import {getAllLinks} from "../../../util/APIUtils";
 
-const { Content, Sider, Header } = Layout;
+const { Content } = Layout;
 
 class Mylinks extends Component {
    constructor(props){

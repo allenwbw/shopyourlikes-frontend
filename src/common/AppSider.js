@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import 'antd/dist/antd.css';
 import {
-    Link,
-    withRouter
+    Link
 } from 'react-router-dom';
 import './AppSider.css';
 
@@ -19,7 +19,8 @@ class AppSider extends Component {
         return (
             <Sider className="app-sider" style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}>
                 <Menu
-                      style={{ height: '100%'}}
+                      style={{ height: '100%', width: 256}}
+                      theme={'light'}
                       className="sider-menu"
                 >
                     <Menu.Item key="/home/dashboard">
@@ -45,4 +46,4 @@ class AppSider extends Component {
     }
 }
 
-export default AppSider;
+export default AppSider

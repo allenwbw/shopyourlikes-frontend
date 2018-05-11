@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { login } from '../../util/APIUtils';
 import './Login.css';
-import { Link } from 'react-router-dom';
 import { ACCESS_TOKEN } from '../../constants';
 
-import { Form, Input, Button, Icon, notification, Layout } from 'antd';
+import { Row, Col, Card, Form, Input, Button, Icon, notification, Layout } from 'antd';
 
 const { Content } = Layout;
 
@@ -14,16 +13,27 @@ class Login extends Component {
     render() {
         const AntWrappedLoginForm = Form.create()(LoginForm);
         return (
-            <Content className="login-page" >
-                <div style={{ padding: 24, minHeight: 280, margin: '10%' }}>
-                    <div className="login-container">
-                        <h1 className="page-title">Login</h1>
-                        <div className="login-content">
-                            <AntWrappedLoginForm onLogin={this.props.onLogin} />
-                        </div>
+            <Layout style={{ height:'100vh'  ,margin: '64px', background: 'rgb(240,242,245)' }}>
+                <Content className="login-page" >
+                    <div className="content-container" style={{ background: 'rgb(240,242,245)' }}>
+                        <Row type="flex" justify="center" gutter={16} style={{ margin: '10%'}}>
+                            <Col sm={24} lg={12} >
+                                <Card title="Login">
+                                    <AntWrappedLoginForm onLogin={this.props.onLogin} />
+                                </Card>
+                            </Col>
+                        </Row>
                     </div>
-                </div>
-            </Content>
+                    {/*<div style={{ padding: 24, minHeight: 280, margin: '10%' }}>*/}
+                        {/*<div className="login-container">*/}
+                            {/*<h1 className="page-title">Login</h1>*/}
+                            {/*<div className="login-content">*/}
+                                {/*<AntWrappedLoginForm onLogin={this.props.onLogin} />*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                </Content>
+            </Layout>
         );
     }
 

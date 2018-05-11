@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Menu, Icon, Layout, notification } from 'antd';
+import { Layout, notification } from 'antd';
 import { ACCESS_TOKEN } from "../constants";
 import { getCurrentUser } from "../util/APIUtils";
 import Login from '../user/login/Login';
@@ -11,12 +10,11 @@ import {
     Route,
     withRouter,
     Switch,
-    Link,
     Redirect
 } from 'react-router-dom';
 import Home from '../user/home/Home'
+import LoadingIndicator from '../common/LoadingIndicator';
 
-const { Content, Sider, Header } = Layout;
 
 class App extends Component {
     constructor(props) {
@@ -87,9 +85,8 @@ class App extends Component {
 
     render() {
         if(this.state.isLoading){
-            return <div />
+            return <LoadingIndicator/>
         }
-
         return (
             <Layout className="app-container">
                 {/*<Header className="app-header">*/}

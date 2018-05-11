@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Table, Form, Input, Icon, Button, Card, Col, Row } from 'antd';
 import {
-    Route,
-    withRouter,
-    Switch,
-    Link,
-    Redirect
+    withRouter
 } from 'react-router-dom';
 import {Layout, notification} from "antd/lib/index";
 import {createLink} from "../../../util/APIUtils";
@@ -89,7 +85,9 @@ let uuid = 0;
 class LinkForm extends Component {
     constructor(props){
         super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
     remove = (k) => {
         const { form } = this.props;
         // can use data-binding to get
@@ -105,6 +103,21 @@ class LinkForm extends Component {
         });
     }
 
+    removeAll = () => {
+        const { form } = this.props;
+        const keys = form.getFieldValue('keys');
+        const names = form.getFieldValue('names');
+        console.log(keys);
+        console.log(names);
+        form.resetFields();
+        form.setFieldsValue({names: names.splice(0,names.length)});
+        const keys1 = form.getFieldValue('keys');
+        const names1 = form.getFieldValue('names');
+        console.log(keys1);
+        console.log(names1);
+    }
+
+
     add = () => {
         const { form } = this.props;
         // can use data-binding to get
@@ -117,11 +130,12 @@ class LinkForm extends Component {
             keys: nextKeys,
         });
     }
+
     handleSubmit(event) {
         event.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                const createFormRequest = {urls:values.names};
+                let createFormRequest = {urls:values.names.filter(name => name !== null)};
                 createLink(createFormRequest).then(response => {
                        this.props.onCreate(response.generatedLinks);
                     }).catch(error => {
@@ -129,7 +143,9 @@ class LinkForm extends Component {
                         message: 'SYL',
                         description: 'Failed to create links!'
                     })
+
                 });
+                this.removeAll();
             }
         });
     }

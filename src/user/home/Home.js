@@ -3,15 +3,13 @@ import AppSider from '../../common/AppSider';
 import { Layout } from 'antd';
 import {
     Route,
-    withRouter,
     Switch,
-    Link,
-    Redirect
+    withRouter,
 } from 'react-router-dom';
 import Dashboard from './dashboard/Dashboard';
 import Mylinks from './mylinks/Mylinks';
 import CreateLinks from './createlinks/CreateLinks';
-const { Content, Sider, Header } = Layout;
+import Stats from './stats/Stats';
 
 class Home extends Component {
     constructor(props) {
@@ -35,6 +33,9 @@ class Home extends Component {
                     <Route exact path="/home/createlinks" render={(props) =>
                         <CreateLinks isAuthenticated={this.isAuthenticated} currentUser={this.currentUser} {...props} />}>
                     </Route>
+                    <Route exact path="/home/stats" render={(props) =>
+                        <Stats isAuthenticated={this.isAuthenticated} currentUser={this.currentUser} {...props} />}>
+                    </Route>
                 </Switch>
             </Layout>
         );
@@ -43,4 +44,4 @@ class Home extends Component {
 
 }
 
-export default Home;
+export default withRouter(Home);

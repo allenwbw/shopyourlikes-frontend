@@ -1,0 +1,11 @@
+.app-sider {
+    width: 150px;
+    position: fixed;
+    background: #fff;
+}
+
+.app-sider > li > a{
+    text-decoration: none;
+    color: rgb(72, 74, 78);
+}
+

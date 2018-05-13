@@ -17,25 +17,31 @@ class AppSider extends Component {
 
     render() {
         return (
-            <Sider className="app-sider" style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}>
+            <Sider
+                  breakpoint="lg"
+                  collapsedWidth="0"
+                  style={{position: 'inline'}}
+                  >
                 <Menu
-                      style={{ height: '100%', width: 256}}
+                      style={{ height: '100%'}}
+                      mode={"inline"}
                       theme={'light'}
+                      defaultSelectedKeys={['1']}
                       className="sider-menu"
                 >
-                    <Menu.Item key="/home/dashboard">
+                    <Menu.Item key="1">
                         <Icon type="dashboard" />
                         <span><Link style={{ color: 'rgb(72, 74, 78)', textDecoration: 'none' }} to="/home/dashboard">Dashboard</Link></span>
                     </Menu.Item>
-                    <Menu.Item key="/home/mylinks">
+                    <Menu.Item key="2">
                         <Icon type="profile" />
                         <span><Link to="/home/mylinks" style={{ color: 'rgb(72, 74, 78)', textDecoration: 'none' }}>My Links</Link></span>
                     </Menu.Item>
-                    <Menu.Item key="/createlinks">
+                    <Menu.Item key="3">
                         <Icon type="tool" />
                         <span><Link to="/home/createlinks" style={{ color: 'rgb(72, 74, 78)', textDecoration: 'none' }}>Create Links</Link></span>
                     </Menu.Item>
-                    <Menu.Item key="home/stats">
+                    <Menu.Item key="4">
                         <Icon type="pie-chart" />
                         <span><Link to="/home/stats" style={{ color: 'rgb(72, 74, 78)', textDecoration: 'none' }}>Statistics</Link></span>
                     </Menu.Item>

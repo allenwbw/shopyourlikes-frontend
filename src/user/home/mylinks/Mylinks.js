@@ -87,8 +87,8 @@ class Mylinks extends Component {
             key: 'date'
         }];
         return (
-            <Layout style={{ padding: '0 24px 24px', marginLeft: 200, background: '#ECECEC' }}>
-                <Content>
+            <Layout style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
+                <Content style={{ margin: '24px 20px 0' }}>
                     <div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
                         <Row gutter={16}>
                             <Col span={24}>

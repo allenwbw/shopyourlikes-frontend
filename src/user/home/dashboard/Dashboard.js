@@ -91,8 +91,8 @@ class Dashboard extends Component {
             key: 'date'
         }];
         return (
-            <Layout style={{ padding: '0 24px 24px', marginLeft: 200, background: '#ECECEC' }}>
-                <Content>
+            <Layout style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
+                <Content style={{ margin: '24px 20px 0' }}>
                     {
                         this.state.isLoading? (<LoadingIndicator />) :
                             (<div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>

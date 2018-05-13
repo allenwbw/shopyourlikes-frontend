@@ -57,8 +57,8 @@ class CreateLinks extends Component {
     render() {
         const AntWrappedLinkForm = Form.create()(LinkForm);
         return (
-            <Layout style={{ padding: '0 24px 24px', marginLeft: 200, background: '#ECECEC' }}>
-                <Content>
+            <Layout style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
+                <Content style={{ margin: '24px 20px 0' }}>
                     <div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
                         <Row gutter={16}>
                             <Col span={24}>
@@ -134,6 +134,7 @@ class LinkForm extends Component {
     handleSubmit(event) {
         event.preventDefault();
         this.props.form.validateFields((err, values) => {
+            if (!values.names){return;}
             if (!err) {
                 let createFormRequest = {urls:values.names.filter(name => name !== null)};
                 createLink(createFormRequest).then(response => {

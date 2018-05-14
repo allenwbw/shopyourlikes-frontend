@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import { getAllLinks } from "../../../util/APIUtils";
 import LoadingIndicator from "../../../common/LoadingIndicator";
+import './Dashboard.css'
 
 const { Content } = Layout;
 
@@ -91,7 +92,7 @@ class Dashboard extends Component {
             key: 'date'
         }];
         return (
-            <Layout style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
+            <Layout className='dash-layout' style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
                 <Content style={{ margin: '24px 20px 0' }}>
                     {
                         this.state.isLoading? (<LoadingIndicator />) :

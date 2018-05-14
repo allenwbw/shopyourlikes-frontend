@@ -18,9 +18,10 @@ class AppSider extends Component {
     render() {
         return (
             <Sider
+                  className="app-sider"
                   breakpoint="lg"
                   collapsedWidth="0"
-                  style={{position: 'inline'}}
+                  style={{position: 'fixed', height: '100vh' }}
                   >
                 <Menu
                       style={{ height: '100%'}}

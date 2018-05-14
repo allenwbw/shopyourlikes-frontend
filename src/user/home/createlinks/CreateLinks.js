@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import {Layout, notification} from "antd/lib/index";
 import {createLink} from "../../../util/APIUtils";
+import './CreateLinks.css'
 const FormItem = Form.Item;
 
 const { Content } = Layout;
@@ -57,7 +58,7 @@ class CreateLinks extends Component {
     render() {
         const AntWrappedLinkForm = Form.create()(LinkForm);
         return (
-            <Layout style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
+            <Layout className="createlinks-layout" style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
                 <Content style={{ margin: '24px 20px 0' }}>
                     <div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
                         <Row gutter={16}>

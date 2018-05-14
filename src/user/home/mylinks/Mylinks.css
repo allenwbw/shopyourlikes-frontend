@@ -1,9 +1,9 @@
-.dash-layout {
+.mylinks-layout {
     margin-left: 200px;
 }
 
 @media only screen and (max-width: 992px) {
-    .dash-layout {
+    .mylinks-layout {
         margin-left: 0;
     }
 }

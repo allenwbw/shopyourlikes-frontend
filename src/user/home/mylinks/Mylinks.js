@@ -4,6 +4,7 @@ import {
     withRouter,
 } from 'react-router-dom';
 import {getAllLinks} from "../../../util/APIUtils";
+import './Mylinks.css'
 
 const { Content } = Layout;
 
@@ -87,7 +88,7 @@ class Mylinks extends Component {
             key: 'date'
         }];
         return (
-            <Layout style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
+            <Layout className="mylinks-layout" style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
                 <Content style={{ margin: '24px 20px 0' }}>
                     <div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
                         <Row gutter={16}>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Layout, Card, Col, Row } from 'antd';
+import './Stats.css'
 const { Content } = Layout;
+
 
 class Stats extends Component {
     constructor(props){
@@ -8,7 +10,7 @@ class Stats extends Component {
     }
     render() {
         return(
-            <Layout style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
+            <Layout className="stats-layout" style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
                 <Content style={{ margin: '24px 20px 0' }}>
                     <div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
                         <Row gutter={16}>

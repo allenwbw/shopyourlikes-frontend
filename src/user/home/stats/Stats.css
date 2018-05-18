@@ -2,7 +2,14 @@
     margin-left: 200px;
 }
 
+.stats-content {
+    margin: 20px;
+}
+
 @media only screen and (max-width: 992px) {
+    .stats-content {
+        margin: 10px 5px 0;
+    }
     .stats-layout {
         margin-left: 0;
     }

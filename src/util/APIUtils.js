@@ -43,7 +43,7 @@ export function login(loginRequest) {
 
 export function createLink(createLinkRequest) {
     return request({
-        url: API_BASE_URL + "/links/createlinks",
+        url: API_BASE_URL + "/links/create",
         method: 'POST',
         body: JSON.stringify(createLinkRequest)
     });

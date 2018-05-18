@@ -13,11 +13,11 @@ class Login extends Component {
     render() {
         const AntWrappedLoginForm = Form.create()(LoginForm);
         return (
-            <Layout style={{ height:'100vh'  ,margin: '64px', background: 'rgb(240,242,245)' }}>
+            <Layout style={{ height:'100vh'  ,marginTop: '64px', background: 'rgb(240,242,245)' }}>
                 <Content className="login-page" >
                     <div className="content-container" style={{ background: 'rgb(240,242,245)' }}>
-                        <Row type="flex" justify="center" gutter={16} style={{ margin: '10%'}}>
-                            <Col sm={24} lg={12} >
+                        <Row type="flex" justify="center" gutter={16} style={{ margin: '10% 5px 5px 5px'}}>
+                            <Col sm={12} xs={24} >
                                 <Card title="Login">
                                     <AntWrappedLoginForm onLogin={this.props.onLogin} />
                                 </Card>

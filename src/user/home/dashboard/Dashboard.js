@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Layout, Table, Card, Col, Row } from 'antd';
+import { Layout, Table, Card, Col, Row, Popover, Button } from 'antd';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {
     withRouter
 } from 'react-router-dom';
 import { getAllLinks } from "../../../util/APIUtils";
 import LoadingIndicator from "../../../common/LoadingIndicator";
 import './Dashboard.css'
+import {notification} from "antd/lib/index";
 
 const { Content } = Layout;
 
@@ -21,15 +23,38 @@ class Dashboard extends Component {
             last: true,
             isLoading: false
         };
+        notification.config({
+            placement: 'topRight',
+            top: 70,
+            duration: 3,
+        });
         this.loadLinks = this.loadLinks.bind(this);
     }
 
     componentWillMount() {
-        this.loadLinks();
+        this.loadLinks(0,30,false);
     }
 
-    loadLinks(page = 0, size = 30){
+    loadLinks(page = 0, size = 30, update = true){
         let promise;
+        if ('mylinks' in localStorage && !update) {
+            let mylinks = JSON.parse(localStorage.getItem('mylinks'));
+            console.log(localStorage.getItem('mylinks'));
+            this.setState({
+                links: mylinks,
+                totalElements: parseInt(localStorage.getItem('totalElements'),10),
+                totalPages: parseInt(localStorage.getItem('totalPages'),10)
+
+            });
+            return;
+        }else {
+            this.setState({
+                links: [],
+                totalElements: 0,
+                totalPages: 0,
+                last: true
+            });
+        }
         promise = getAllLinks(page,size);
         if (!promise) {
             return;
@@ -45,7 +70,12 @@ class Dashboard extends Component {
                     totalElements: response.totalElements,
                     totalPages: response.totalPages,
                     last: response.last,
-                })
+                });
+                if (this.state.last) {
+                    localStorage.setItem('mylinks', JSON.stringify(this.state.links));
+                    localStorage.setItem('totalPages',this.state.totalPages.toString());
+                    localStorage.setItem('totalElements', this.state.totalElements.toString());
+                }
             }).catch(error => {
                 this.setState({
                     isLoading: false,
@@ -59,53 +89,63 @@ class Dashboard extends Component {
                 isLoading: false
             });
         }
+        console.log(this.state.links);
+    }
+
+    onCopy() {
+        notification.success({
+            message: 'SYL App',
+            description: "Copied link to clipboard!",
+        });
     }
 
     render() {
         let totalEarning = 0, totalClicks = 0;
-        let tableKey = 0;
         this.state.links.forEach(function (elem) {
            totalEarning += elem.earnings;
            totalClicks += elem.redirects;
         });
+        console.log(this.state.links);
+        this.state.links.slice(0,5).forEach((row) => {row.creationDate = row.creationDate.substr(0,10);});
         const dataSource = this.state.links.slice(0,5);
         const columns = [{
-            title: 'URL',
-            dataIndex: 'originalUrl',
-            key: 'url',
-
+            title: 'Retailer',
+            dataIndex: 'merchantName',
+            key: 'merch',
+            width: '24%'
         },{
-            title: 'Earnings',
+            title: 'Earning',
             dataIndex: 'earnings',
             key: 'earnings',
+            width: '22%'
         },{
-            title: 'clicks',
+            title: 'Click',
             dataIndex: 'redirects',
             key: 'clicks',
+            width: '20%'
         },{
-            title: 'Merchant',
-            dataIndex: 'merchantId',
-            key: 'merch'
-        },{
-            title: 'Date created',
+            title: 'Date',
             dataIndex: 'creationDate',
-            key: 'date'
+            key: 'date',
+            width: '22%'
         }];
         return (
-            <Layout className='dash-layout' style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
-                <Content style={{ margin: '24px 20px 0' }}>
+            <Layout className='dash-layout' style={{ padding: '0', background: '#ECECEC' }}>
+                <Content className='dash-content' >
                     {
                         this.state.isLoading? (<LoadingIndicator />) :
-                            (<div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
+                            (<div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
                                 <Row gutter={16} style={{ marginBottom: 8 }}>
-                                    <Col span={12}>
+                                    <Col span={24}>
                                         <Card hoverable={true}
                                               className="earning-card"
                                               title={<span style={{fontSize: '2em'}}>Total earnings</span>}>
                                             <span style={{fontSize: 'large'}}>${totalEarning}.00</span>
                                         </Card>
                                     </Col>
-                                    <Col span={12}>
+                                </Row>
+                                <Row gutter={16} style={{ marginBottom: 8 }}>
+                                    <Col span={24}>
                                         <Card hoverable={true}
                                               className="clicks-card"
                                               title={<span style={{fontSize: '2em'}}>Total clicks</span>}>
@@ -115,8 +155,24 @@ class Dashboard extends Component {
                                 </Row>
                                 <Row gutter={16}>
                                     <Col span={24}>
-                                        <Card title="Your recent links">
-                                            <Table rowKey={() => {tableKey += 1;tableKey}} dataSource={dataSource} columns={columns} />
+                                        <Card className="dash-table" title="Your recent links">
+                                            <Table pagination={false}
+                                                   expandRowByClick={true}
+                                                   expandedRowRender={record =>
+                                                       <Popover content={
+                                                           <CopyToClipboard
+                                                               onCopy={this.onCopy}
+                                                               text={record.link}>
+                                                               <Button type={'primary'}>Copy to Clipboard</Button>
+                                                           </CopyToClipboard>}
+                                                                title={"Press the button to copy your SYL link"}
+                                                                trigger={'click'}>
+                                                           <a>{record.link}</a>
+                                                       </Popover>}
+                                                   rowKey={record => record.hash}
+                                                   dataSource={dataSource}
+                                                   columns={columns}
+                                                   size="small"/>
                                         </Card>
                                     </Col>
                                 </Row>

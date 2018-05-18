@@ -2,8 +2,41 @@
     margin-left: 200px;
 }
 
+.mylinks-content {
+    margin: 20px;
+}
+
+.links-filter-dropdown {
+    padding: 8px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+}
+
+.links-filter-dropdown input {
+    width: 130px;
+    margin-right: 8px;
+}
+
+.highlight {
+    color: #f50;
+}
+
 @media only screen and (max-width: 992px) {
     .mylinks-layout {
         margin-left: 0;
+    }
+
+    .mylinks-content {
+        margin: 10px 5px 0;
+    }
+
+    .ant-table-row-expand-icon-cell {
+        width: 5px !important;
+        min-width: 5px !important;
+    }
+
+    .link-table > .ant-card-body {
+        padding: 10px 5px 10px;
     }
 }

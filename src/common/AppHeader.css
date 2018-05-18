@@ -16,9 +16,12 @@
 
 .app-header {
     position: fixed;
+    background: white;
     width: 100%;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
     z-index: 10;
     padding: 0;
+    color: white;
 }
 
 .app-menu {

@@ -1,12 +1,125 @@
 import React, { Component } from 'react';
-import { Layout, Table, Card, Col, Row } from 'antd';
+import { Layout, Table, Card, Col, Row, Popover, Button, Icon, Input } from 'antd';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {
     withRouter,
 } from 'react-router-dom';
 import {getAllLinks} from "../../../util/APIUtils";
 import './Mylinks.css'
+import {notification} from "antd/lib/index";
 
 const { Content } = Layout;
+
+
+class LinksTable extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            filterDropdownVisible: false,
+            data: this.props.links,
+            searchText: '',
+            filtered: false,
+        };
+    }
+
+    onInputChange = (e) => {
+        this.setState({ searchText: e.target.value });
+    }
+
+    onSearch = () => {
+        const { searchText } = this.state;
+        const reg = new RegExp(searchText, 'gi');
+        this.setState({
+            filterDropdownVisible: false,
+            filtered: !!searchText,
+            data: this.props.links.map((record) => {
+                const match = record.merchantName.match(reg);
+                if (!match) {
+                    return null;
+                }
+                return {
+                    ...record,
+                    merchantName: (
+                        <span>
+              {record.merchantName.split(new RegExp(`(?<=${searchText})|(?=${searchText})`, 'i')).map((text, i) => (
+                  text.toLowerCase() === searchText.toLowerCase() ?
+                      <span key={i} className="highlight">{text}</span> : text // eslint-disable-line
+              ))}
+            </span>
+                    ),
+                };
+            }).filter(record => !!record),
+        });
+    }
+
+    render() {
+        const columns = [{
+            title: "Retailer",
+            dataIndex: "merchantName",
+            key: "merch",
+            width: "25%",
+            filterDropdown: (
+                <div className="links-filter-dropdown">
+                    <Input
+                        ref={ele => this.searchInput = ele}
+                        placeholder="Search retailer"
+                        value={this.state.searchText}
+                        onChange={this.onInputChange}
+                        onPressEnter={this.onSearch}
+                    />
+                    <Button type="primary" onClick={this.onSearch}>Search</Button>
+                </div>
+            ),
+            filterIcon: <Icon type="search" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
+            filterDropdownVisible: this.state.filterDropdownVisible,
+            onFilterDropdownVisibleChange: (visible) => {
+                this.setState({
+                    filterDropdownVisible: visible,
+                }, () => this.searchInput && this.searchInput.focus());
+            },
+        },{
+            title: "Earning",
+            dataIndex: "earnings",
+            key: "earnings",
+            width: "23%",
+            sorter: (a, b) => a.earnings - b.earnings,
+        },{
+            title: 'Click',
+            dataIndex: 'redirects',
+            key: 'clicks',
+            width: '19%',
+            sorter: (a, b) => a.redirects - b.redirects
+        },{
+            title: 'Date',
+            dataIndex: 'creationDate',
+            key: 'date',
+            width: '20%'
+        }]
+        return <Table
+            expandRowByClick={true}
+            expandedRowRender={record =>
+                <Popover content={
+                    <CopyToClipboard
+                        onCopy={this.props.onCopy}
+                        text={record.link}>
+                        <Button type={'primary'}>Copy to Clipboard</Button>
+                    </CopyToClipboard>}
+                         title={"Press the button to copy your SYL link"}
+                         trigger={'click'}>
+                    <a>{record.link}</a>
+                </Popover>}
+            rowKey={record => record.hash}
+            columns={columns}
+            dataSource={this.state.data} size={'small'}/>;
+    }
+
+
+}
+
+
+
+
+
 
 class Mylinks extends Component {
    constructor(props){
@@ -20,12 +133,44 @@ class Mylinks extends Component {
            last: true,
            isLoading: false
        };
+       notification.config({
+           placement: 'topRight',
+           top: 70,
+           duration: 3,
+       });
        this.loadLinks = this.loadLinks.bind(this);
+       this.onCopy = this.onCopy.bind(this);
    }
     componentWillMount() {
-        this.loadLinks();
+        this.loadLinks(0,30,false);
     }
-    loadLinks(page = 0, size = 30){
+
+    onCopy() {
+        notification.success({
+            message: 'SYL App',
+            description: "Copied link to clipboard!",
+        });
+    }
+
+    loadLinks(page = 0, size = 30, update = true){
+        if ('mylinks' in localStorage && !update) {
+            let mylinks = JSON.parse(localStorage.getItem('mylinks'));
+            console.log(localStorage.getItem('mylinks'));
+            this.setState({
+                links: mylinks,
+                totalElements: parseInt(localStorage.getItem('totalElements'),10),
+                totalPages: parseInt(localStorage.getItem('totalPages'),10)
+
+            });
+            return;
+        }else {
+            this.setState({
+                links: [],
+                totalElements: 0,
+                totalPages: 0,
+                last: true
+            });
+        }
         let promise;
         promise = getAllLinks(page,size);
         if (!promise) {
@@ -35,6 +180,7 @@ class Mylinks extends Component {
         this.setState({isLoading: true});
         promise
             .then(response => {
+                console.log(response);
                 this.setState({
                     links: this.state.links.concat(response.content),
                     page: response.page,
@@ -42,7 +188,12 @@ class Mylinks extends Component {
                     totalElements: response.totalElements,
                     totalPages: response.totalPages,
                     last: response.last,
-                })
+                });
+                if (this.state.last) {
+                    localStorage.setItem('mylinks', JSON.stringify(this.state.links));
+                    localStorage.setItem('totalPages',this.state.totalPages.toString());
+                    localStorage.setItem('totalElements', this.state.totalElements.toString());
+                }
             }).catch(error => {
             this.setState({
                 isLoading: false,
@@ -50,7 +201,7 @@ class Mylinks extends Component {
             })
         });
         if (!this.state.last) {
-            this.loadLinks(this.state.page + 1);
+            this.loadLinks(this.page + 1);
         } else {
             this.setState({
                 isLoading: false
@@ -58,43 +209,29 @@ class Mylinks extends Component {
         }
     }
     render() {
-        let totalEarning = 0, totalClicks = 0;
-        let tableKey = 0;
-        this.state.links.forEach(function (elem) {
-            totalEarning += elem.earnings;
-            totalClicks += elem.redirects;
-        });
-        const dataSource = this.state.links;
-        const columns = [{
-            title: 'URL',
-            dataIndex: 'originalUrl',
-            key: 'url',
-
-        },{
-            title: 'Earnings',
-            dataIndex: 'earnings',
-            key: 'earnings',
-        },{
-            title: 'clicks',
-            dataIndex: 'redirects',
-            key: 'clicks',
-        },{
-            title: 'Merchant',
-            dataIndex: 'merchantId',
-            key: 'merch'
-        },{
-            title: 'Date created',
-            dataIndex: 'creationDate',
-            key: 'date'
-        }];
         return (
-            <Layout className="mylinks-layout" style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
-                <Content style={{ margin: '24px 20px 0' }}>
-                    <div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
+            <Layout className="mylinks-layout" style={{ padding: '0', background: '#ECECEC' }}>
+                <Content className="mylinks-content" >
+                    <div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
                         <Row gutter={16}>
                             <Col span={24}>
-                                <Card title="Your links">
-                                    <Table rowKey={() => {tableKey += 1;tableKey}} dataSource={dataSource} columns={columns} />
+                                <Card className="link-table" title="Your links">
+                                    <LinksTable onCopy={this.onCopy} links={this.state.links}/>
+                                    {/*<Table expandRowByClick={true}*/}
+                                           {/*expandedRowRender={record =>*/}
+                                               {/*<Popover content={*/}
+                                                   {/*<CopyToClipboard*/}
+                                                       {/*onCopy={this.onCopy}*/}
+                                                       {/*text={record.link}>*/}
+                                                       {/*<Button type={'primary'}>Copy to Clipboard</Button>*/}
+                                                   {/*</CopyToClipboard>}*/}
+                                                        {/*title={"Press the button to copy your SYL link"}*/}
+                                                        {/*trigger={'click'}>*/}
+                                                   {/*<a>{record.link}</a>*/}
+                                               {/*</Popover>}*/}
+                                           {/*rowKey={record => record.hash}*/}
+                                           {/*dataSource={dataSource}*/}
+                                           {/*columns={columns} size="small"/>*/}
                                 </Card>
                             </Col>
                         </Row>

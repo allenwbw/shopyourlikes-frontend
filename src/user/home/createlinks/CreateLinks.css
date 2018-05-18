@@ -2,7 +2,16 @@
     margin-left: 200px;
 }
 
+.createlinks-content {
+    margin: 20px;
+}
+
 @media only screen and (max-width: 992px) {
+
+    .createlinks-content {
+        margin: 20px 5px 0;
+    }
+
     .createlinks-layout {
         margin-left: 0;
     }

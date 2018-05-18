@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import {
-    Link
+    withRouter
 } from 'react-router-dom';
 import './AppSider.css';
 
@@ -13,6 +13,11 @@ const { Sider } = Layout;
 class AppSider extends Component {
     constructor(props) {
         super(props);
+        this.handleMenuClick = this.handleMenuClick.bind(this);
+    }
+
+    handleMenuClick({ key }) {
+        this.props.history.push(key);
     }
 
     render() {
@@ -27,24 +32,26 @@ class AppSider extends Component {
                       style={{ height: '100%'}}
                       mode={"inline"}
                       theme={'light'}
-                      defaultSelectedKeys={['1']}
+                      selectedKeys={[this.props.location.pathname]}
+                      selected
                       className="sider-menu"
+                      onClick={this.handleMenuClick}
                 >
-                    <Menu.Item key="1">
+                    <Menu.Item key="/home/dashboard">
                         <Icon type="dashboard" />
-                        <span><Link style={{ color: 'rgb(72, 74, 78)', textDecoration: 'none' }} to="/home/dashboard">Dashboard</Link></span>
+                        <span>Dashboard</span>
                     </Menu.Item>
-                    <Menu.Item key="2">
+                    <Menu.Item key="/home/mylinks">
                         <Icon type="profile" />
-                        <span><Link to="/home/mylinks" style={{ color: 'rgb(72, 74, 78)', textDecoration: 'none' }}>My Links</Link></span>
+                        <span>My Links</span>
                     </Menu.Item>
-                    <Menu.Item key="3">
+                    <Menu.Item key="/home/createlinks">
                         <Icon type="tool" />
-                        <span><Link to="/home/createlinks" style={{ color: 'rgb(72, 74, 78)', textDecoration: 'none' }}>Create Links</Link></span>
+                        <span>Create Links</span>
                     </Menu.Item>
-                    <Menu.Item key="4">
+                    <Menu.Item key="/home/stats">
                         <Icon type="pie-chart" />
-                        <span><Link to="/home/stats" style={{ color: 'rgb(72, 74, 78)', textDecoration: 'none' }}>Statistics</Link></span>
+                        <span>Statistics</span>
                     </Menu.Item>
                 </Menu>
             </Sider>
@@ -53,4 +60,4 @@ class AppSider extends Component {
     }
 }
 
-export default AppSider
+export default withRouter(AppSider);

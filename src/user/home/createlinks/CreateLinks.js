@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Table, Form, Input, Icon, Button, Card, Col, Row } from 'antd';
+import { Table, Form, Input, Icon, Button, Card, Col, Row, Popover } from 'antd';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {
     withRouter
 } from 'react-router-dom';
 import {Layout, notification} from "antd/lib/index";
-import {createLink} from "../../../util/APIUtils";
+import {createLink, getAllLinks} from "../../../util/APIUtils";
 import './CreateLinks.css'
 const FormItem = Form.Item;
 
@@ -20,7 +21,44 @@ class CreateLinks extends Component {
         });
         this.createdLinks = [];
         this.linkTable = [];
+        this.reloadedLinks = [];
+        this.last = true;
+        this.page = 0;
     }
+
+    loadLinks(page = 0, size = 30){
+        let promise;
+        promise = getAllLinks(page,size);
+        if (!promise) {
+            return;
+        }
+
+        this.setState({isLoading: true});
+        promise
+            .then(response => {
+                this.reloadedLinks = this.reloadedLinks.concat(response.content);
+                this.page = response.page;
+                this.last = response.last;
+                if (response.last) {
+                    localStorage.setItem('mylinks', JSON.stringify(this.reloadedLinks));
+                    localStorage.setItem('totalPages',response.totalPages.toString());
+                    localStorage.setItem('totalElements', response.totalElements.toString());
+                }
+            }).catch(error => {
+            this.last = true;
+        });
+        if (!this.last) {
+            this.loadLinks(this.page + 1);
+        }
+    }
+
+    onCopy() {
+        notification.success({
+            message: 'SYL App',
+            description: "Copied link to clipboard!",
+        });
+    }
+
 
     handleCreate(links){
         notification.success({
@@ -30,18 +68,25 @@ class CreateLinks extends Component {
         this.createdLinks = links;
         let dataSource = this.createdLinks;
         let columns = [{
-            title: 'Original',
-            dataIndex: 'originalUrl',
-            key: 'url',
-
-        },{
             title: 'Cents per click',
             dataIndex: 'ecpc',
             key: 'earnings',
+            width: '50%'
         },{
             title: 'SYL link',
-            dataIndex: 'link',
             key: 'link',
+            width: '50%',
+            render: (record) =>
+                <Popover content={
+                    <CopyToClipboard
+                        onCopy={this.onCopy}
+                        text={record.link}>
+                        <Button type={'primary'}>Copy to Clipboard</Button>
+                    </CopyToClipboard>}
+                         title={"Press the button to copy your SYL link"}
+                         trigger={'click'}>
+                    <a>{record.link}</a>
+                </Popover>
         }];
         this.linkTable = [
             <Row gutter={16}>
@@ -51,7 +96,8 @@ class CreateLinks extends Component {
                     </Card>
                 </Col>
             </Row>
-        ]
+        ];
+        this.loadLinks();
         this.props.history.push("/home/createlinks");
 
     }
@@ -59,8 +105,8 @@ class CreateLinks extends Component {
         const AntWrappedLinkForm = Form.create()(LinkForm);
         return (
             <Layout className="createlinks-layout" style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
-                <Content style={{ margin: '24px 20px 0' }}>
-                    <div className="content-container" style={{ background: '#ECECEC', padding: '20px' }}>
+                <Content className="createlinks-content" >
+                    <div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
                         <Row gutter={16}>
                             <Col span={24}>
                                 <Card title="Create links">

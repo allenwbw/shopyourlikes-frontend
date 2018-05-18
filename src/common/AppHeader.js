@@ -25,9 +25,9 @@ class AppHeader extends Component{
                 <Menu
                     className="app-menu"
                     mode="horizontal"
-                    key="/info"
-                    theme="dark"
-                    style={{ lineHeight: '64px' }} >
+                    selectedKeys={[this.props.location.pathname]}
+                    theme="light"
+                    style={{ lineHeight: '63px' }} >
                     <Menu.Item key="/profile" className="profile-menu">
                         <ProfileDropdownMenu
                             currentUser={this.props.currentUser}

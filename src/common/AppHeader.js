@@ -7,12 +7,18 @@ import './AppHeader.css';
 import { Layout, Menu, Dropdown, Icon } from 'antd';
 const Header = Layout.Header;
 
+
+
+/** Component that renders page header **/
 class AppHeader extends Component{
     constructor(props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
-
+    /**
+     * Callback function called when user clicks menu elements, calls function from parent component
+     * @param {String} key - key of menu elements
+     * */
     handleClick({ key }) {
         if (key === "logout") {
             this.props.onLogout();
@@ -51,7 +57,7 @@ class AppHeader extends Component{
         );
     }
 }
-
+/** Function to render a dropdown menu on header */
 function ProfileDropdownMenu(props) {
     const dropdownMenu = (
         <Menu onClick={props.handleClick} className="profile-dropdown-menu">

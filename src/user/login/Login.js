@@ -9,6 +9,7 @@ const { Content } = Layout;
 
 const FormItem = Form.Item;
 
+/** Component that renders the login interface */
 class Login extends Component {
     render() {
         const AntWrappedLoginForm = Form.create()(LoginForm);
@@ -38,13 +39,17 @@ class Login extends Component {
     }
 
 }
-
+/** Component that renders the form for login credential input */
 class LoginForm extends Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
+    /**
+     * Callback function that is called when user submits the form. Sends AJAX request to backend server
+     * for user authentication and stores the response from server if the response is a JWT token. Renders
+     * notification message after login succeeds or fails.
+     * */
     handleSubmit(event) {
         event.preventDefault();
         this.props.form.validateFields((err, values) => {

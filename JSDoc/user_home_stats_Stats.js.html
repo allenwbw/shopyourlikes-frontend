@@ -1,4 +1,32 @@
-import React, { Component } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: user/home/stats/Stats.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: user/home/stats/Stats.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
 import { Layout, Card, Col, Row } from 'antd';
 import { Chart, Axis, Geom, Tooltip, Coord, Legend, Label } from 'bizcharts';
 import { DataView } from '@antv/data-set';
@@ -121,21 +149,21 @@ class Stats extends Component {
             }
         };
         return(
-            <Layout className="stats-layout" style={{ padding: '0', background: '#ECECEC' }}>
-                <Content className='stats-content' >
-                    <div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
-                        <Row gutter={16} style={{ marginBottom: 8 }}>
-                            <Col span={24}>
-                                <Card title="Earning break down by retailers">
-                                    <Chart width={300} height={350} data={dv} scale={cols} padding={[ 0 ]} forceFit>
-                                        <Coord type='theta' radius={0.75} />
-                                        <Axis name="percent" />
-                                        <Legend position='bottom' offsetY={-window.innerHeight / 2 + 380} offsetX={0} />
-                                        <Tooltip
+            &lt;Layout className="stats-layout" style={{ padding: '0', background: '#ECECEC' }}>
+                &lt;Content className='stats-content' >
+                    &lt;div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
+                        &lt;Row gutter={16} style={{ marginBottom: 8 }}>
+                            &lt;Col span={24}>
+                                &lt;Card title="Earning break down by retailers">
+                                    &lt;Chart width={300} height={350} data={dv} scale={cols} padding={[ 0 ]} forceFit>
+                                        &lt;Coord type='theta' radius={0.75} />
+                                        &lt;Axis name="percent" />
+                                        &lt;Legend position='bottom' offsetY={-window.innerHeight / 2 + 380} offsetX={0} />
+                                        &lt;Tooltip
                                             showTitle={false}
-                                            itemTpl='<li><span style="background-color:{color};" class="g2-tooltip-marker"></span>{name}: {value}</li>'
+                                            itemTpl='&lt;li>&lt;span style="background-color:{color};" class="g2-tooltip-marker">&lt;/span>{name}: {value}&lt;/li>'
                                         />
-                                        <Geom
+                                        &lt;Geom
                                             type="intervalStack"
                                             position="percent"
                                             color='item'
@@ -148,29 +176,29 @@ class Stats extends Component {
                                             }]}
                                             style={{lineWidth: 1,stroke: '#fff'}}
                                         >
-                                            <Label content='percent' offset={-40} textStyle={{
+                                            &lt;Label content='percent' offset={-40} textStyle={{
                                                 rotate: 0,
                                                 textAlign: 'center',
                                                 shadowBlur: 2,
                                                 shadowColor: 'rgba(0, 0, 0, .45)'
                                             }} />
-                                        </Geom>
-                                    </Chart>
-                                </Card>
-                            </Col>
-                        </Row>
-                        <Row gutter={16} style={{ marginBottom: 8 }}>
-                            <Col span={24}>
-                                <Card title="Clicks break down by retailers">
-                                    <Chart width={300} height={350} data={dv2} scale={cols2} padding={[ 0 ]} forceFit>
-                                        <Coord type='theta' radius={0.75} />
-                                        <Axis name="percent" />
-                                        <Legend position='bottom' offsetY={-window.innerHeight / 2 + 380} offsetX={0} />
-                                        <Tooltip
+                                        &lt;/Geom>
+                                    &lt;/Chart>
+                                &lt;/Card>
+                            &lt;/Col>
+                        &lt;/Row>
+                        &lt;Row gutter={16} style={{ marginBottom: 8 }}>
+                            &lt;Col span={24}>
+                                &lt;Card title="Clicks break down by retailers">
+                                    &lt;Chart width={300} height={350} data={dv2} scale={cols2} padding={[ 0 ]} forceFit>
+                                        &lt;Coord type='theta' radius={0.75} />
+                                        &lt;Axis name="percent" />
+                                        &lt;Legend position='bottom' offsetY={-window.innerHeight / 2 + 380} offsetX={0} />
+                                        &lt;Tooltip
                                             showTitle={false}
-                                            itemTpl='<li><span style="background-color:{color};" class="g2-tooltip-marker"></span>{name}: {value}</li>'
+                                            itemTpl='&lt;li>&lt;span style="background-color:{color};" class="g2-tooltip-marker">&lt;/span>{name}: {value}&lt;/li>'
                                         />
-                                        <Geom
+                                        &lt;Geom
                                             type="intervalStack"
                                             position="percent"
                                             color='item'
@@ -183,22 +211,44 @@ class Stats extends Component {
                                             }]}
                                             style={{lineWidth: 1,stroke: '#fff'}}
                                         >
-                                            <Label content='percent' offset={-40} textStyle={{
+                                            &lt;Label content='percent' offset={-40} textStyle={{
                                                 rotate: 0,
                                                 textAlign: 'center',
                                                 shadowBlur: 2,
                                                 shadowColor: 'rgba(0, 0, 0, .45)'
                                             }} />
-                                        </Geom>
-                                    </Chart>
-                                </Card>
-                            </Col>
-                        </Row>
-                    </div>
-                </Content>
-            </Layout>
+                                        &lt;/Geom>
+                                    &lt;/Chart>
+                                &lt;/Card>
+                            &lt;/Col>
+                        &lt;/Row>
+                    &lt;/div>
+                &lt;/Content>
+            &lt;/Layout>
         )
     }
 }
 
-export default Stats;
+export default Stats;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="AppHeader.html">AppHeader</a></li><li><a href="AppSider.html">AppSider</a></li><li><a href="CreateLinks.html">CreateLinks</a></li><li><a href="Dashboard.html">Dashboard</a></li><li><a href="Home.html">Home</a></li><li><a href="LinkForm.html">LinkForm</a></li><li><a href="LinksTable.html">LinksTable</a></li><li><a href="Login.html">Login</a></li><li><a href="LoginForm.html">LoginForm</a></li><li><a href="Mylinks.html">Mylinks</a></li><li><a href="Stats.html">Stats</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ProfileDropdownMenu">ProfileDropdownMenu</a></li><li><a href="global.html#request">request</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jun 04 2018 18:49:42 GMT-0700 (PDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

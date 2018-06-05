@@ -1,4 +1,32 @@
-import React, { Component } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: user/home/createlinks/CreateLinks.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: user/home/createlinks/CreateLinks.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
 import { Table, Form, Input, Icon, Button, Card, Col, Row, Popover } from 'antd';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {
@@ -87,25 +115,25 @@ class CreateLinks extends Component {
             key: 'link',
             width: '50%',
             render: (record) =>
-                <Popover content={
-                    <CopyToClipboard
+                &lt;Popover content={
+                    &lt;CopyToClipboard
                         onCopy={this.onCopy}
                         text={record.link}>
-                        <Button type={'primary'}>Copy to Clipboard</Button>
-                    </CopyToClipboard>}
+                        &lt;Button type={'primary'}>Copy to Clipboard&lt;/Button>
+                    &lt;/CopyToClipboard>}
                          title={"Press the button to copy your SYL link"}
                          trigger={'click'}>
-                    <a>{record.link}</a>
-                </Popover>
+                    &lt;a>{record.link}&lt;/a>
+                &lt;/Popover>
         }];
         this.linkTable = [
-            <Row gutter={16}>
-                <Col span={24}>
-                    <Card title="Your links">
-                        <Table dataSource={dataSource} columns={columns} />
-                    </Card>
-                </Col>
-            </Row>
+            &lt;Row gutter={16}>
+                &lt;Col span={24}>
+                    &lt;Card title="Your links">
+                        &lt;Table dataSource={dataSource} columns={columns} />
+                    &lt;/Card>
+                &lt;/Col>
+            &lt;/Row>
         ];
         this.loadLinks();
         this.props.history.push("/home/createlinks");
@@ -114,20 +142,20 @@ class CreateLinks extends Component {
     render() {
         const AntWrappedLinkForm = Form.create()(LinkForm);
         return (
-            <Layout className="createlinks-layout" style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
-                <Content className="createlinks-content" >
-                    <div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
-                        <Row gutter={16}>
-                            <Col span={24}>
-                                <Card title="Create links">
-                                    <AntWrappedLinkForm onCreate={this.handleCreate} />
-                                </Card>
-                            </Col>
-                        </Row>
+            &lt;Layout className="createlinks-layout" style={{ padding: '0 0px 0px', background: '#ECECEC' }}>
+                &lt;Content className="createlinks-content" >
+                    &lt;div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
+                        &lt;Row gutter={16}>
+                            &lt;Col span={24}>
+                                &lt;Card title="Create links">
+                                    &lt;AntWrappedLinkForm onCreate={this.handleCreate} />
+                                &lt;/Card>
+                            &lt;/Col>
+                        &lt;/Row>
                         {this.linkTable}
-                    </div>
-                </Content>
-            </Layout>
+                    &lt;/div>
+                &lt;/Content>
+            &lt;/Layout>
         );
     }
 }
@@ -249,7 +277,7 @@ class LinkForm extends Component {
         const keys = getFieldValue('keys');
         const formItems = keys.map((k, index) => {
             return (
-                <FormItem
+                &lt;FormItem
                     {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
                     label={index === 0 ? 'URLs' : ''}
                     required={false}
@@ -263,34 +291,56 @@ class LinkForm extends Component {
                             message: "Please input url or delete this field.",
                         }],
                     })(
-                        <Input placeholder="Url" style={{ width: '60%', marginRight: 8 }} />
+                        &lt;Input placeholder="Url" style={{ width: '60%', marginRight: 8 }} />
                     )}
                     {keys.length > 1 ? (
-                        <Icon
+                        &lt;Icon
                             className="dynamic-delete-button"
                             type="minus-circle-o"
                             disabled={keys.length === 1}
                             onClick={() => this.remove(k)}
                         />
                     ) : null}
-                </FormItem>
+                &lt;/FormItem>
             );
         });
         return (
-            <Form onSubmit={this.handleSubmit}>
+            &lt;Form onSubmit={this.handleSubmit}>
                 {formItems}
-                <FormItem {...formItemLayoutWithOutLabel}>
-                    <Button type="dashed" onClick={this.add} style={{ width: '60%' }}>
-                        <Icon type="plus" /> Add field
-                    </Button>
-                </FormItem>
-                <FormItem {...formItemLayoutWithOutLabel}>
-                    <Button type="primary" htmlType="submit">Submit</Button>
-                </FormItem>
-            </Form>
+                &lt;FormItem {...formItemLayoutWithOutLabel}>
+                    &lt;Button type="dashed" onClick={this.add} style={{ width: '60%' }}>
+                        &lt;Icon type="plus" /> Add field
+                    &lt;/Button>
+                &lt;/FormItem>
+                &lt;FormItem {...formItemLayoutWithOutLabel}>
+                    &lt;Button type="primary" htmlType="submit">Submit&lt;/Button>
+                &lt;/FormItem>
+            &lt;/Form>
         );
     }
 
 }
 
-export default withRouter(CreateLinks);
+export default withRouter(CreateLinks);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="AppHeader.html">AppHeader</a></li><li><a href="AppSider.html">AppSider</a></li><li><a href="CreateLinks.html">CreateLinks</a></li><li><a href="Dashboard.html">Dashboard</a></li><li><a href="Home.html">Home</a></li><li><a href="LinkForm.html">LinkForm</a></li><li><a href="LinksTable.html">LinksTable</a></li><li><a href="Login.html">Login</a></li><li><a href="LoginForm.html">LoginForm</a></li><li><a href="Mylinks.html">Mylinks</a></li><li><a href="Stats.html">Stats</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ProfileDropdownMenu">ProfileDropdownMenu</a></li><li><a href="global.html#request">request</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jun 04 2018 18:49:42 GMT-0700 (PDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

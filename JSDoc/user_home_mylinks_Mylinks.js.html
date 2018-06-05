@@ -1,4 +1,32 @@
-import React, { Component } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: user/home/mylinks/Mylinks.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: user/home/mylinks/Mylinks.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
 import { Layout, Table, Card, Col, Row, Popover, Button, Icon, Input } from 'antd';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {
@@ -43,12 +71,12 @@ class LinksTable extends Component {
                 return {
                     ...record,
                     merchantName: (
-                        <span>
-              {record.merchantName.split(new RegExp(`(?<=${searchText})|(?=${searchText})`, 'i')).map((text, i) => (
+                        &lt;span>
+              {record.merchantName.split(new RegExp(`(?&lt;=${searchText})|(?=${searchText})`, 'i')).map((text, i) => (
                   text.toLowerCase() === searchText.toLowerCase() ?
-                      <span key={i} className="highlight">{text}</span> : text // eslint-disable-line
+                      &lt;span key={i} className="highlight">{text}&lt;/span> : text // eslint-disable-line
               ))}
-            </span>
+            &lt;/span>
                     ),
                 };
             }).filter(record => !!record),
@@ -62,23 +90,23 @@ class LinksTable extends Component {
             key: "merch",
             width: "25%",
             filterDropdown: (
-                <div className="links-filter-dropdown">
-                    <Input
+                &lt;div className="links-filter-dropdown">
+                    &lt;Input
                         ref={ele => this.searchInput = ele}
                         placeholder="Search retailer"
                         value={this.state.searchText}
                         onChange={this.onInputChange}
                         onPressEnter={this.onSearch}
                     />
-                    <Button type="primary" onClick={this.onSearch}>Search</Button>
-                </div>
+                    &lt;Button type="primary" onClick={this.onSearch}>Search&lt;/Button>
+                &lt;/div>
             ),
-            filterIcon: <Icon type="search" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
+            filterIcon: &lt;Icon type="search" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
             filterDropdownVisible: this.state.filterDropdownVisible,
             onFilterDropdownVisibleChange: (visible) => {
                 this.setState({
                     filterDropdownVisible: visible,
-                }, () => this.searchInput && this.searchInput.focus());
+                }, () => this.searchInput &amp;&amp; this.searchInput.focus());
             },
         },{
             title: "Earning",
@@ -98,19 +126,19 @@ class LinksTable extends Component {
             key: 'date',
             width: '20%'
         }]
-        return <Table
+        return &lt;Table
             expandRowByClick={true}
             expandedRowRender={record =>
-                <Popover content={
-                    <CopyToClipboard
+                &lt;Popover content={
+                    &lt;CopyToClipboard
                         onCopy={this.props.onCopy}
                         text={record.link}>
-                        <Button type={'primary'}>Copy to Clipboard</Button>
-                    </CopyToClipboard>}
+                        &lt;Button type={'primary'}>Copy to Clipboard&lt;/Button>
+                    &lt;/CopyToClipboard>}
                          title={"Press the button to copy your SYL link"}
                          trigger={'click'}>
-                    <a>{record.link}</a>
-                </Popover>}
+                    &lt;a>{record.link}&lt;/a>
+                &lt;/Popover>}
             rowKey={record => record.hash}
             columns={columns}
             dataSource={this.state.data} size={'small'}/>;
@@ -164,7 +192,7 @@ class Mylinks extends Component {
      * @param {bool} update - if true, load links from server, else load links from browser storage
      * */
     loadLinks(page = 0, size = 30, update = true){
-        if ('mylinks' in localStorage && !update) {
+        if ('mylinks' in localStorage &amp;&amp; !update) {
             let mylinks = JSON.parse(localStorage.getItem('mylinks'));
             console.log(localStorage.getItem('mylinks'));
             this.setState({
@@ -221,36 +249,58 @@ class Mylinks extends Component {
     }
     render() {
         return (
-            <Layout className="mylinks-layout" style={{ padding: '0', background: '#ECECEC' }}>
-                <Content className="mylinks-content" >
-                    <div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
-                        <Row gutter={16}>
-                            <Col span={24}>
-                                <Card className="link-table" title="Your links">
-                                    <LinksTable onCopy={this.onCopy} links={this.state.links}/>
-                                    {/*<Table expandRowByClick={true}*/}
+            &lt;Layout className="mylinks-layout" style={{ padding: '0', background: '#ECECEC' }}>
+                &lt;Content className="mylinks-content" >
+                    &lt;div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
+                        &lt;Row gutter={16}>
+                            &lt;Col span={24}>
+                                &lt;Card className="link-table" title="Your links">
+                                    &lt;LinksTable onCopy={this.onCopy} links={this.state.links}/>
+                                    {/*&lt;Table expandRowByClick={true}*/}
                                            {/*expandedRowRender={record =>*/}
-                                               {/*<Popover content={*/}
-                                                   {/*<CopyToClipboard*/}
+                                               {/*&lt;Popover content={*/}
+                                                   {/*&lt;CopyToClipboard*/}
                                                        {/*onCopy={this.onCopy}*/}
                                                        {/*text={record.link}>*/}
-                                                       {/*<Button type={'primary'}>Copy to Clipboard</Button>*/}
-                                                   {/*</CopyToClipboard>}*/}
+                                                       {/*&lt;Button type={'primary'}>Copy to Clipboard&lt;/Button>*/}
+                                                   {/*&lt;/CopyToClipboard>}*/}
                                                         {/*title={"Press the button to copy your SYL link"}*/}
                                                         {/*trigger={'click'}>*/}
-                                                   {/*<a>{record.link}</a>*/}
-                                               {/*</Popover>}*/}
+                                                   {/*&lt;a>{record.link}&lt;/a>*/}
+                                               {/*&lt;/Popover>}*/}
                                            {/*rowKey={record => record.hash}*/}
                                            {/*dataSource={dataSource}*/}
                                            {/*columns={columns} size="small"/>*/}
-                                </Card>
-                            </Col>
-                        </Row>
-                    </div>
-                </Content>
-            </Layout>
+                                &lt;/Card>
+                            &lt;/Col>
+                        &lt;/Row>
+                    &lt;/div>
+                &lt;/Content>
+            &lt;/Layout>
         )
     }
 }
 
-export default withRouter(Mylinks);
+export default withRouter(Mylinks);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="AppHeader.html">AppHeader</a></li><li><a href="AppSider.html">AppSider</a></li><li><a href="CreateLinks.html">CreateLinks</a></li><li><a href="Dashboard.html">Dashboard</a></li><li><a href="Home.html">Home</a></li><li><a href="LinkForm.html">LinkForm</a></li><li><a href="LinksTable.html">LinksTable</a></li><li><a href="Login.html">Login</a></li><li><a href="LoginForm.html">LoginForm</a></li><li><a href="Mylinks.html">Mylinks</a></li><li><a href="Stats.html">Stats</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ProfileDropdownMenu">ProfileDropdownMenu</a></li><li><a href="global.html#request">request</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jun 04 2018 18:49:42 GMT-0700 (PDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

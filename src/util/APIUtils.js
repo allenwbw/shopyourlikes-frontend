@@ -1,5 +1,7 @@
 import { API_BASE_URL, LINK_LIST_SIZE, ACCESS_TOKEN } from '../constants';
 
+
+/** Function to send AJAX request and receives response */
 const request = (options) => {
     const headers = new Headers({
         'Content-Type': 'application/json',

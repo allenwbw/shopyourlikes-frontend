@@ -9,13 +9,18 @@ import { Layout, Menu, Icon } from 'antd';
 
 const { Sider } = Layout;
 
-
+/** Component that renders a navigation side bar */
 class AppSider extends Component {
     constructor(props) {
         super(props);
         this.handleMenuClick = this.handleMenuClick.bind(this);
     }
 
+    /**
+     * Callback function that is called when user clicks menu elements.
+     * Redirect path to "key".
+     * @param {string} key - key of menu element that is clicked
+     * */
     handleMenuClick({ key }) {
         this.props.history.push(key);
     }

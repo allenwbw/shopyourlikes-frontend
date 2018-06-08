@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2fada50d-d7d1-4f06-b874-eb5de71b4344" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/AppHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/AppSider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/AppSider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/LoadingIndicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/LoadingIndicator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/home/createlinks/CreateLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/home/createlinks/CreateLinks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/home/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/home/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user/home/stats/Stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/home/stats/Stats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/APIUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/APIUtils.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +23,8 @@
       <file leaf-file-name="Dashboard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/home/dashboard/Dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="101" column="10" selection-start-line="101" selection-end-line="102" />
+            <state relative-caret-position="-1994">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -42,7 +35,7 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="30">
               <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -51,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mylinks.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Mylinks.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="164" column="9" selection-start-line="158" selection-start-column="3" selection-end-line="164" selection-end-column="9" />
+            <state relative-caret-position="244">
+              <caret line="234" column="34" lean-forward="true" selection-start-line="234" selection-start-column="34" selection-end-line="234" selection-end-column="34" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -63,20 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadingIndicator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/LoadingIndicator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Stats.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/home/stats/Stats.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="218">
+              <caret line="132" column="104" selection-start-line="132" selection-start-column="104" selection-end-line="132" selection-end-column="104" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -93,20 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/login/Login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-509">
-              <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="APIUtils.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="APIUtils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/APIUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-330">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -123,8 +98,8 @@
       <file leaf-file-name="CreateLinks.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/home/createlinks/CreateLinks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-960">
-              <caret line="198" column="17" selection-start-line="198" selection-start-column="17" selection-end-line="198" selection-end-column="17" />
+            <state relative-caret-position="600">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -184,10 +159,10 @@
         <option value="$PROJECT_DIR$/src/App/App.js" />
         <option value="$PROJECT_DIR$/src/user/home/Home.js" />
         <option value="$PROJECT_DIR$/src/user/home/dashboard/Dashboard.js" />
-        <option value="$PROJECT_DIR$/src/user/home/stats/Stats.js" />
-        <option value="$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js" />
         <option value="$PROJECT_DIR$/src/user/home/createlinks/CreateLinks.js" />
         <option value="$PROJECT_DIR$/src/util/APIUtils.js" />
+        <option value="$PROJECT_DIR$/src/user/home/stats/Stats.js" />
+        <option value="$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js" />
       </list>
     </option>
   </component>
@@ -208,8 +183,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="135" />
+    <option name="x" value="154" />
+    <option name="y" value="23" />
     <option name="width" value="1182" />
     <option name="height" value="740" />
   </component>
@@ -219,7 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,12 +227,6 @@
               <item name="shopyourlikes-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shopyourlikes-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shopyourlikes-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopyourlikes-client" type="b2602c69:ProjectViewProjectNode" />
@@ -322,6 +290,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -367,14 +336,15 @@
       <workItem from="1526928031551" duration="1120000" />
       <workItem from="1528154859370" duration="1885000" />
       <workItem from="1528157211409" duration="4413000" />
+      <workItem from="1528419659792" duration="1219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116295000" />
+    <option name="totallyTimeSpent" value="118968000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="135" width="1182" height="740" extended-state="0" />
+    <frame x="154" y="23" width="1182" height="740" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25465313" />
@@ -382,8 +352,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3276923" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24978466" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32854864" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -410,26 +380,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/user/home/stats/Stats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="159" column="104" selection-start-line="159" selection-start-column="104" selection-end-line="159" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/home/dashboard/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
@@ -749,7 +699,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="30">
           <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -764,40 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/home/stats/Stats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="164" column="9" selection-start-line="158" selection-start-column="3" selection-end-line="164" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/home/dashboard/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="101" column="10" selection-start-line="101" selection-end-line="102" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/home/createlinks/CreateLinks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-960">
-          <caret line="198" column="17" selection-start-line="198" selection-start-column="17" selection-end-line="198" selection-end-column="17" />
+        <state relative-caret-position="600">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -813,8 +733,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/APIUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/user/login/Login.js</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/src/util/APIUtils.js#login#987;</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/login/Login.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/login/Login.js#ACCESS_TOKEN#118;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Button#196;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Card#177;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Col#172;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Form#183;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Icon#204;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Input#189;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Layout#224;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Login.css#87;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Row#167;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#login#51;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#notification#210;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/antd/lib/index.d.ts#Button#403;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Card#499;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Col#741;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Form#934;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Icon#976;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Input#1018;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Layout#1119;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Row#1754;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#notification#1404;</node>
+            <node x="" y="">$PROJECT_DIR$/src/constants/index.js#ACCESS_TOKEN#108;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react/cjs/react.development.js#Component#45693;</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="242.0" y="155.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Overview</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/user/home/stats/Stats.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js;</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/src/util/APIUtils.js#createLink#1168;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/util/APIUtils.js#getAllLinks#756;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/util/APIUtils.js#getCurrentUser#1365;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/util/APIUtils.js#login#987;</node>
+            <node x="" y="">$PROJECT_DIR$/src/App/App.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/App/App.js#ACCESS_TOKEN#145;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#App.css#42;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#AppHeader#280;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#Home#412;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#Layout#100;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#LoadingIndicator#449;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#Login#239;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#Redirect#369;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#Route#330;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#Switch#357;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#antd.css#62;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#getCurrentUser#190;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#notification#108;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/App/App.js#withRouter#341;</node>
+            <node x="" y="">$PROJECT_DIR$/src/common/AppHeader.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/common/AppHeader.js#AppHeader.css#103;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js#Dropdown#152;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js#Icon#162;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js#Layout#138;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js#Link#55;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js#Menu#146;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppHeader.js#withRouter#65;</node>
+            <node x="" y="">$PROJECT_DIR$/src/common/AppSider.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/common/AppSider.js#AppSider.css#122;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js#Icon#171;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js#Layout#157;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js#Menu#165;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js#antd.css#42;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/common/AppSider.js#withRouter#84;</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/createlinks/CreateLinks.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/createlinks/CreateLinks.js#Button#77;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Card#85;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Col#91;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#CopyToClipboard#132;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#CreateLinks.css#349;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Form#58;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Icon#71;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Input#64;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Layout#240;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Popover#101;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Row#96;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#Table#51;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#createLink#293;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#getAllLinks#305;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#notification#248;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/createlinks/CreateLinks.js#withRouter#194;</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/dashboard/Dashboard.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/dashboard/Dashboard.js#Button#91;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#Card#66;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#Col#72;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#CopyToClipboard#121;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#Dashboard.css#340;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#Layout#51;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#LoadingIndicator#282;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#Popover#82;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#Row#77;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#Table#59;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#getAllLinks#230;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#notification#373;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/dashboard/Dashboard.js#withRouter#183;</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/Home.js#AppSider#49;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#CreateLinks#289;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#Dashboard#201;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#Layout#97;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#Mylinks#248;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#Route#132;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#Stats#342;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#Switch#143;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/Home.js#withRouter#155;</node>
+            <node x="" y="">$PROJECT_DIR$/src/common/LoadingIndicator.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/login/Login.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/login/Login.js#ACCESS_TOKEN#118;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Button#196;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Card#177;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Col#172;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Form#183;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Icon#204;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Input#189;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Layout#224;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Login.css#87;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#Row#167;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#login#51;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/login/Login.js#notification#210;</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/mylinks/Mylinks.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js#Button#91;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Card#66;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Col#72;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#CopyToClipboard#134;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Icon#99;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Input#105;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Layout#51;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Mylinks.css#287;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Popover#82;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Row#77;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#Table#59;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#getAllLinks#243;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#notification#318;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/mylinks/Mylinks.js#withRouter#196;</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/stats/Stats.css</node>
+            <node x="" y="">$PROJECT_DIR$/src/user/home/stats/Stats.js#Axis#105;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Card#59;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Chart#98;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Col#65;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Component#16;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Coord#126;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#DataView#176;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Geom#111;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Label#141;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Layout#51;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Legend#133;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#React#7;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Row#70;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Stats.css#210;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#Tooltip#117;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/src/user/home/stats/Stats.js#getAllLinks#239;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/antd/dist/antd.css</node>
+            <node x="" y="">DataView;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/antd/lib/index.d.ts#Button#403;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Card#499;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Col#741;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Dropdown#884;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Form#934;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Icon#976;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Input#1018;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Layout#1119;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Menu#1318;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Popover#1570;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Row#1754;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#Table#2018;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/antd/lib/index.d.ts#notification#1404;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/bizcharts/typings/index.d.ts#Axis#8497;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/bizcharts/typings/index.d.ts#Chart#8334;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/bizcharts/typings/index.d.ts#Coord#8544;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/bizcharts/typings/index.d.ts#Geom#8642;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/bizcharts/typings/index.d.ts#Label#10944;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/bizcharts/typings/index.d.ts#Legend#10993;/Users/wangbowei/Dropbox/CS130Proj/shopyourlikes-client/node_modules/bizcharts/typings/index.d.ts#Tooltip#11044;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/constants/index.js#ACCESS_TOKEN#108;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react-copy-to-clipboard/lib/index.js#CopyToClipboard#103;</node>
+            <node x="" y="">Link;Redirect;Route;Switch;withRouter;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react/cjs/react.development.js#Component#45693;</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.3812549642573471" x="1145.3947916666666" y="640.1458333333333" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Overview</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/home/stats/Stats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="132" column="104" selection-start-line="132" selection-start-column="104" selection-end-line="132" selection-end-column="104" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/home/dashboard/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1994">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/home/mylinks/Mylinks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="234" column="34" lean-forward="true" selection-start-line="234" selection-start-column="34" selection-end-line="234" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

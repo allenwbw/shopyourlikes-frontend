@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Table, Card, Col, Row, Popover, Button, Icon, Input } from 'antd';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import {CSVLink} from 'react-csv';
 import {
     withRouter,
 } from 'react-router-dom';
@@ -224,6 +225,17 @@ class Mylinks extends Component {
             <Layout className="mylinks-layout" style={{ padding: '0', background: '#ECECEC' }}>
                 <Content className="mylinks-content" >
                     <div className="content-container" style={{ background: '#ECECEC', padding: '0' }}>
+                        <Row gutter={16}>
+                            <Col span={24}>
+                                <Card>
+                                    <CSVLink data={this.state.links}
+                                             filename={"mylinks.csv"}
+                                             target="_blank">
+                                        <Button type={'primary'}>Export to CSV</Button>
+                                    </CSVLink>
+                                </Card>
+                            </Col>
+                        </Row>
                         <Row gutter={16}>
                             <Col span={24}>
                                 <Card className="link-table" title="Your links">

@@ -130,7 +130,7 @@ class Stats extends Component {
                                     <Chart width={300} height={350} data={dv} scale={cols} padding={[ 0 ]} forceFit>
                                         <Coord type='theta' radius={0.75} />
                                         <Axis name="percent" />
-                                        <Legend position='bottom' offsetY={-window.innerHeight / 2 + 380} offsetX={0} />
+                                        <Legend position='bottom' offsetY={-window.innerHeight / 2 + 305} offsetX={0} />
                                         <Tooltip
                                             showTitle={false}
                                             itemTpl='<li><span style="background-color:{color};" class="g2-tooltip-marker"></span>{name}: {value}</li>'
@@ -165,7 +165,7 @@ class Stats extends Component {
                                     <Chart width={300} height={350} data={dv2} scale={cols2} padding={[ 0 ]} forceFit>
                                         <Coord type='theta' radius={0.75} />
                                         <Axis name="percent" />
-                                        <Legend position='bottom' offsetY={-window.innerHeight / 2 + 380} offsetX={0} />
+                                        <Legend position='bottom' offsetY={-window.innerHeight / 2 + 305} offsetX={0} />
                                         <Tooltip
                                             showTitle={false}
                                             itemTpl='<li><span style="background-color:{color};" class="g2-tooltip-marker"></span>{name}: {value}</li>'
